@@ -1,6 +1,6 @@
 import { Component,inject } from '@angular/core';
 import { LoadingService } from './services/loading.service';
-import { bgimages } from 'C:/Users/venugopal.desai/Desktop/FlashLingua/FlashLingua/src/assets/bg.model';
+import { bgimages } from '../assets/bg.model';
 import { initializeApp } from "firebase/app";
 import{getDatabase,ref,push} from 'firebase/database';
 import { user } from '@angular/fire/auth';
