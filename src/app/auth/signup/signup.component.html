@@ -1,0 +1,23 @@
+<div class="signin-container">
+    
+    <p>Please sign-in using your credentials</p>
+    <form [formGroup]="authform" (ngSubmit)="onSubmit()" class="d-flex flex-column w-100 justify-content-center align-items-center">
+        
+        <input type="text" placeholder="Username" formControlName="username" />
+        <input type="password" placeholder="Password" formControlName="password" />
+        
+        <button type="submit"  class="signin">Sign Up</button>
+    </form>
+    <div class="alert alert-danger d-flex align-items-center p-2" *ngIf="errormsg">
+        {{ errormsg }}
+    </div>
+
+    <div class="d-flex align-items-center" *ngIf="isLoading">
+    <mat-spinner  class="loading-spinner" [diameter]="22" style="fill: rgb(4 49 226 / 59%);"></mat-spinner>
+    Signing-up...
+    </div>
+    <button (click)="ongoogleSignUp()" class="sogoogle">Sign In with Google</button>
+    <p class="mt-4" >Don't have an account?</p>
+    <button routerLink="/login" class="signup">Sign In</button>
+    
+</div>

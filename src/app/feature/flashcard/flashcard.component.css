@@ -1,0 +1,186 @@
+*::after::before{
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: inherit;
+    color: white;
+    text-shadow: 5px 5px 5px black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    
+}
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+    align-content: center;
+
+}
+
+
+.main{
+    
+    display: flex;
+    flex-direction: column;
+   /* grid-template: 40px 40px repeat(3,minmax(100px,1fr)) 40px/repeat(12,1fr) ;*/
+    gap: 1em;
+    align-content: center;
+    justify-content: center;
+    height: 57vh;
+   /* backdrop-filter: blur(10px);*/
+}
+.inputLine{
+   
+    
+    text-align: center;
+    align-self: center;
+    width: 25%;
+}
+input{
+    font-size: 1.25rem;
+    display: inline-block;
+    width: 100%;
+    background-color: inherit;
+    border: none;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+   
+    backdrop-filter: contrast(120%);
+    box-shadow:0 0 15px black;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 5px black;
+    
+}
+::placeholder{
+    color: white;
+    font-size: 1.25rem;
+    text-align: center;
+    opacity: 0.5;}
+input:focus{
+    
+    outline: none;
+    
+}
+.footer{
+    
+}
+.cards{
+    
+}
+.mainCard{
+   
+    
+    overflow-y: scroll;
+    padding: 10px 15px;
+    scrollbar-width: none;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+   /* border-image: url('https://images.unsplash.com/photo-1702576179843-73c378fc4c2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNDI0NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzMwNjM4NTl8&ixlib=rb-4.0.3&q=80&w=1080') 200 stretch;*/
+    clip-path: inset(0 round 10px);
+    color: black;
+    background-color: rgb(244, 244, 247);
+    text-shadow: 2px 2px 5px white;
+    height: 40vh;
+    width: 25%;
+    align-self: center;
+
+}
+.mainCard>.cardHeader{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+    
+}
+.cardBody>.partsofspeech{
+    padding: 0.25em;
+    color: grey;
+    font-style: italic;
+    font-weight: 800;
+    font-size: 1.125rem;
+}
+.definition{
+    padding: 0.5em;
+}
+
+
+.btn{
+    
+    align-self: center;
+     min-width: 10em;
+    min-height: 3em;
+    cursor: pointer;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    background-color: rgb(108, 187, 240);
+    border-radius: 10px ;
+    color: white;
+    border: none;
+    font-size: 0.7em;
+}
+.btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: inherit;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    border-radius: 10px;
+    padding: 0.5em;
+    font-size: 1.25rem;
+   gap: 35px;
+  
+}
+.createBtn{
+    min-width: 100px;
+    
+   
+}
+@media(max-width:600px){
+    .mainCard{
+   
+    border: 1px dashed red;
+    max-height: 60vh;
+    min-height: 50vh;
+    width: 90%;
+}
+.synCard{
+   
+    border: 1px dashed red;
+    max-height: 30vh;
+    min-height: 30vh;
+    width: 90%;
+    display: flex;
+}
+.anoCard{
+   
+    border: 1px dashed red;
+    max-height: 30vh;
+    min-height: 30vh;
+    width: 90%;
+    display: flex;
+}
+#cardsb,#cardab{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+}
+.btn,.createBtn{
+    min-width: 75px;
+    min-height: 50px;
+    align-self: center;
+}
+.cards{
+    display: flex;
+    flex-direction: column;
+    
+    gap: 0.5em;
+    justify-content: center;
+    align-content: center;
+}
+body{
+    max-height: 10vh;
+}
+}

@@ -1,0 +1,65 @@
+body{
+    
+    background-repeat: repeat-y;
+    background-size: cover;
+   
+    text-shadow: 5px 5px 5px black;
+    height: 100vh;
+    overflow-x: hidden;
+}
+h4{
+    color: wheat;
+    text-align: center;
+    margin: 0;
+    
+    padding-bottom: 18px;
+    cursor: pointer;
+    animation:textscroll 10s linear infinite
+}
+.header{
+   
+    justify-self: center;
+    text-align: center;
+    padding-top: 2.5vh;
+    color: wheat;
+    margin-bottom: 1rem;
+}
+.loading{
+   
+    position: fixed;
+    height: 98vh;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(1px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  .loader{
+   
+    border: 5px solid #f3f3f3; /* Light grey */
+    border-top: 5px solid #3498db; /* Blue */
+    border-right:5px solid #3498db;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+  }
+  @keyframes spin{
+    0%{
+      border-bottom:5px solid #3498db;
+         transform: rotate(0deg);
+    }
+    100%{
+      border-bottom:5px solid #3498db;
+        transform: rotate(360deg);
+    }
+  }
+  @keyframes textscroll{
+    0%{
+        transform: translateX(90%);;
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+  }

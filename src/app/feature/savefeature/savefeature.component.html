@@ -1,0 +1,28 @@
+<div class="save-page">
+<div class="cards">
+    <div class="card" *ngFor="let word of Words$ | async ; let i=index" [style.animationDelay]="i * -0.5 + 's'">
+        
+       
+    <span [ngStyle]="{'color': (word.word == (Word$ | async)?.word ? 'red' : 'black')}" (click)="onword(word)">{{word.word}}</span>
+    <div class="legend">
+      <div class="red" [ngClass]="{'backred': checkbackground(word) === 'red'}" title='New' (click)="updatelevel('Add',word)"></div>
+      <div class="yellow" [ngClass]="{'yellowback':checkbackground(word)=='yellow'}" title="Learnt" (click)="updatelevel('Learn',word)"></div>
+        <div class="green" [ngClass]="{'greenback':checkbackground(word)=='green'}" title="Mastered" (click)="updatelevel('Master',word)"></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="Model" id="Modeldiv">
+  <span class="close" (click)="close()">&times;</span>
+    <h2>Word Details</h2>
+  <div class="model-content" >
+    
+    <p><strong>Word:</strong> {{ (Word$ | async)?.word }}</p>
+    <p><strong>Level:</strong> {{ (Word$ | async)?.level || 'N/A' }}</p>
+    <div><strong>Meaning:</strong><br>
+      <div id="maincard"></div>
+    </div>
+    <p><strong>Example:</strong> example</p>
+  </div>
+</div>
